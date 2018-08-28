@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from level.serializers import *
+from rest_framework.generics import *
+
+class LevelDropDownListView(ListAPIView):
+    queryset = Level.objects.all()
+    serializer_class = LevelSerializer

@@ -31,6 +31,7 @@ class ProjectDetails(models.Model):
     status=models.IntegerField(choices=STATUS_CHOICES, default=0,blank=True,null=True)
     current_level=models.ForeignKey(Level,on_delete=models.CASCADE,blank=True,null=True)
     venture=models.IntegerField( choices=VENTURE_CHOICES, default=0,blank=True,null=True)
+    due_date = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return str(self.id)

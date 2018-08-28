@@ -14,7 +14,7 @@ class PartnerDetails(models.Model):
 
 
 class JointVenture(models.Model):
-    partner=models.ForeignKey(PartnerDetails,on_delete=models.CASCADE,blank=True,null=True)
+    partner=models.ForeignKey(PartnerDetails,on_delete=models.CASCADE,blank=True,null=True ,related_name='partner_details')
     project=models.ForeignKey(ProjectDetails,on_delete=models.CASCADE,blank=True,null=True)
     partner_percentage=models.DecimalField(max_digits=20,decimal_places=2,blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)

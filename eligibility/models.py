@@ -1,5 +1,5 @@
 from django.db import models
-from project.models import ProjectDetails
+from project.models import ProjectDetails,ProjectLevel
 from django.contrib.auth.models import User
 
 class TechnicalEligibility(models.Model):
